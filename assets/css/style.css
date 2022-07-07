@@ -1,0 +1,237 @@
+body{
+    font-family: 'Haas Grot Text R Web', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+    background: #1b3241;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    max-width: 1500px;
+    height: 90vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1.5fr;
+    grid-template-rows: repeat(5,1fr)90px;
+}
+.left{
+    background: rgb(85, 93, 108);
+    grid-row: 1/6;
+    border-top-left-radius: 10px;    
+}
+.left_dots{
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+}
+.dot{
+    height: 10px;
+    width: 15px;
+    border-radius: 50%;
+}
+.left_menu{
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+.menu_item{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.meni_item_text{
+    font-weight: 600;
+    font-size: 14px;
+}
+.active{
+    color: aqua;
+}
+
+.left_songs_list{
+    max-height: 530px;
+    overflow-y: auto;
+    padding: 10px 10px 10px 0px;
+}
+.left_songs_list::-webkit-scrollbar{
+    width: 0;
+}
+.song{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.song:hover{
+    background: red;
+}
+.play_hover{
+    display: none;
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.song:hover .play_hover {
+    display: block;
+}
+.song_img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.song_name{
+    font-weight: 600;
+    color: white;
+}
+.song_artist{
+    color: white;
+}
+.song_num{
+    color:navy;
+    width: 20px;
+}
+
+.equalizer_gif{
+    width: 20px;
+    display: none;
+}
+
+.middle{
+    background: rgb(141, 149, 165);
+    grid-row: 1/6;
+    
+}
+.middle_top{
+    height: 50%;
+    background-image: url('https://i.ytimg.com/vi/MvGC-aWcoXQ/maxresdefault.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    background: rgb(158, 158, 158);
+    height: 35px;
+    padding: 0 5px 0 10px;
+    width: 210px;
+    border-radius: 50px;
+}
+.search input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: whitesmoke;
+    font-size: 17px;
+}
+.search input::placeholder{
+    color: rgb(53, 43, 43);
+}
+
+.popular{
+    padding: 10px;
+}
+.popular_header{
+    font-weight: 600;
+    font-size: 18px;
+    color: whitesmoke;
+}
+.popular_list{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+.rap{
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.rap:hover{
+    transform: scale(1.05);
+}
+.artist_img{
+    width: 89px;
+    height: 89px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0.5);
+    margin-bottom: 5px;
+}
+.rap_text{
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 13px;
+}
+.album_img{
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0.5);
+    margin-bottom: 5px;
+}
+
+.right{
+    grid: 1/4;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+}
+.right_song{
+    text-align: center;
+    color: white;
+    
+}
+.right_song_img{
+    border-radius: 5px;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.bottom {
+    background: #0f1624;
+    grid-column: 1/4;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-top: 1px solid #738fc721;
+}
